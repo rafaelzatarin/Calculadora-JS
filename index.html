@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+    <h3>Calculadora com CSS e JavaScript</h3>
+    <div class='container'>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="text-center">
+                    <form class="form-inline">
+                        <div class='form-group' id='valores'>
+                            <input type="text" class='txtres' id='result' value='0' readonly>
+                        </div>
+                        <div class='form-group' id='btn'>
+                            <button type='button' class='btn-num' onclick="addNum(7)">7</button>
+                            <button type='button' class='btn-num' onclick="addNum(8)">8</button>
+                            <button type='button' class='btn-num' onclick="addNum(9)">9</button>
+                            <button type='button' class='btn-fn' onclick="limpar()">AC</button>
+                            <button type='button' class='btn-hist' onclick="historico()">
+                                <img class='imgHist' src="img/Hist 10x10.png">
+                            </button>
+                        </div>
+                        <div class='form-group' id='btn'>
+                            <button type='button' class='btn-num' onclick="addNum(4)">4</button>
+                            <button type='button' class='btn-num' onclick="addNum(5)">5</button>
+                            <button type='button' class='btn-num' onclick="addNum(6)">6</button>
+                            <button type='button' class='btn-op' onclick="defOper('*')">*</button>
+                            <button type='button' class='btn-op' onclick="defOper('/')">/</button>
+                        </div>
+                        <div class='form-group' id='btn'>
+                            <button type='button' class='btn-num' onclick="addNum(1)">1</button>
+                            <button type='button' class='btn-num' onclick="addNum(2)">2</button>
+                            <button type='button' class='btn-num' onclick="addNum(3)">3</button>
+                            <button type='button' class='btn-op' onclick="defOper('+')">+</button>
+                            <button type='button' class='btn-op' onclick="defOper('-')">-</button>
+                        </div>
+                        <div class='form-group' id='btn'>
+                            <button type='button' class='btn-zero' onclick="addNum(0)">0</button>
+                            <button type='button' class='btn-num' onclick="addNum('.')">.</button>
+                            <button type='button' class='btn-igual' onclick="calcular()">=</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id='resHist'>
+        <h3>Históricos de Totais Calculados</h3>
+        <select name="retorno" id="retorno" size='8'></select>
+    </div>
+    <script src='scripts.js'></script>
+</body>
+</html>
